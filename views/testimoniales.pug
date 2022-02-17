@@ -1,0 +1,37 @@
+extends ./layout/index
+
+block contenido     
+   main.container.mt-5 
+        h1.text-center= pagina
+
+        blockquote.text-center Experiencias de nuestros clientes
+        
+        include ./layout/bloque_testimoniales
+
+        .row
+
+            .col-md-12
+                h2.d-block.w-100.text-center Cuentanos de tu experiencia con nosotros 
+
+                if (errores)
+                    each error in errores
+                        .alert.col.alert-danger.text-center= error.mensaje
+
+            .row.justify-content-center.col 
+                .col-md-8 
+                    form(action="/testimoniales" method="POST")
+                        .form-group 
+                            label(for="nombre") Nombre 
+                            input#nombre(type="text", placeholder="Nombre", name="nombre", class="form-control" value= nombre)
+                        .form-group 
+                            label(for="email") Correo
+                            input#email(type="email", placeholder="Correo", name="email", class="form-control" value= email)
+                        .form-group 
+                            label(for="mensaje") Mensaje
+                            textarea#mensaje(name="mensaje", placeholder="Mensaje", cols="85%", rows="3")=mensaje 
+                        
+                        input.btn.btn-success.btn-block(type="submit") 
+
+
+
+        

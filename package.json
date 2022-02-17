@@ -1,0 +1,24 @@
+{
+  "name": "agencia_viajes",
+  "version": "1.0.0",
+  "description": "Proyecto NODE",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "type": "module",
+  "author": "Alhan Isoldi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.16.1",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "dotenv": "^16.0.0"
+  }
+}
